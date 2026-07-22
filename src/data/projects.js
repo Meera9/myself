@@ -1,9 +1,14 @@
+import project1 from "../assets/images/projects/vue-form-builder.jpg";
+import project2 from "../assets/images/projects/image-strip-gallery.jpg";
+import project3 from "../assets/images/projects/vue-data-table.png";
+
+
 export const projects = [
     {
         id: 1,
         title: "Vue 3 Form Builder Pro",
         category: "Vue.js",
-        image: "/images/projects/vue-form-builder.jpg",
+        image: project1,
         description:
             "Vue 3 form builder boilerplate with reactive schema validation, multi-language error messages, and reusable form components.",
 
@@ -30,7 +35,7 @@ export const projects = [
         title: "Responsive Image Strip Gallery",
         category: "HTML/CSS",
 
-        image: "/images/projects/image-strip-gallery.jpg",
+        image: project2,
 
         description:
             "A lightweight responsive image strip gallery built using HTML, CSS, and JavaScript. The layout maintains fixed columns while adapting smoothly across different screen sizes.",
@@ -56,7 +61,7 @@ export const projects = [
         title: "Vue 3 Reusable Data Table Component",
         category: "Open Source",
 
-        image: "/images/projects/vue-data-table.png",
+        image: project3,
 
         description:
             "A highly reusable Vue 3 data table component built with the Composition API. Designed for enterprise applications with dynamic columns, scoped slots, custom cell rendering, client-side sorting, and seamless API integration.",

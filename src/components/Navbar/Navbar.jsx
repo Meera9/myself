@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import {Link} from "react-scroll";
 import {HiMenuAlt3, HiX} from "react-icons/hi";
+import resume from "../../assets/resume.pdf"
 
 const menus = [
     {name: "Home", to: "home"},
@@ -72,7 +73,7 @@ function Navbar() {
                 {/* Resume */}
 
                 <a
-                    href="/resume.pdf"
+                    href={resume}
                     download
                     className="hidden lg:block px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:scale-105 transition"
                 >

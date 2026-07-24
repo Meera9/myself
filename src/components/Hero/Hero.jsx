@@ -3,6 +3,7 @@ import profile from "../../assets/images/profile.jpg";
 import {TypeAnimation} from "react-type-animation";
 import FloatingTech from "./FloatingTech.jsx";
 import {motion} from "framer-motion";
+import resume from "../../assets/resume.pdf"
 
 function Hero() {
     return (
@@ -77,10 +78,12 @@ function Hero() {
 
                             <div className="mt-10 flex flex-wrap gap-5">
 
-                                <button
+                                <a
+                                    href={resume}
+                                    download
                                     className="bg-gradient-to-r from-purple-600 to-pink-500 px-8 py-4 rounded-xl font-semibold hover:scale-105 transition">
                                     Download Resume
-                                </button>
+                                </a>
 
                                 <button
                                     className="border border-purple-500 px-8 py-4 rounded-xl flex items-center gap-3 hover:bg-purple-600 transition">

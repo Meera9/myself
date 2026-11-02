@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import {Link} from "react-scroll";
 import {HiMenuAlt3, HiX} from "react-icons/hi";
 import resume from "../../assets/resume.pdf"
+import {SCROLL_PROPS, writeHash} from "../../utils/scroll.js";
 
 const menus = [
     {name: "Home", to: "home"},
@@ -56,10 +57,9 @@ function Navbar() {
                         <li key={item.name}>
                             <Link
                                 to={item.to}
+                                {...SCROLL_PROPS}
                                 spy={true}
-                                smooth={true}
-                                duration={600}
-                                offset={-80}
+                                onClick={() => writeHash(item.to)}
                                 activeClass="text-purple-400"
                                 className="block py-3 text-white hover:text-pink-400"
                             >
@@ -99,10 +99,11 @@ function Navbar() {
                         <Link
                             key={item.name}
                             to={item.to}
-                            smooth={true}
-                            duration={500}
-                            offset={-80}
-                            onClick={() => setMenu(false)}
+                            {...SCROLL_PROPS}
+                            onClick={() => {
+                                setMenu(false);
+                                writeHash(item.to);
+                            }}
                             className="block py-5 text-center text-white hover:text-pink-400 hover:bg-slate-800 transition-all duration-300 cursor-pointer"
                         >
                             {item.name}

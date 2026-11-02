@@ -7,8 +7,11 @@ import Projects from "./components/projects/Projects.jsx";
 import Contact from "./components/contact/Contact.jsx";
 import Footer from "./components/layout/Footer.jsx";
 import Services from "./components/services/Services";
+import useHashScroll from "./hooks/useHashScroll.js";
 
 function App() {
+    useHashScroll();
+
     return (
         <div className="bg-slate-950 text-white overflow-x-hidden">
 
